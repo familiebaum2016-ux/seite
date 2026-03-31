@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siegtaler Dart-Akrobaten & DC Dartageddon</title>
+    <style>
+        /* Modernes Dart-Design */
+        :root {
+            --primary-red: #e63946;
+            --dark-bg: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-light: #f1f1f1;
+            --accent-yellow: #ffb703;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 4px solid var(--primary-red);
+        }
+
+        .banner-img {
+            max-height: 250px;
+            width: auto;
+        }
+
+        nav {
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-red);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        nav a:hover {
+            color: var(--primary-red);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        h2 {
+            color: var(--primary-red);
+            text-transform: uppercase;
+            border-left: 5px solid var(--primary-red);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        img.responsive {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .team-list {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            column-count: 2;
+        }
+
+        .highlight {
+            color: var(--accent-yellow);
+            font-weight: bold;
+        }
+
+        .sponsor-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .sponsor-card {
+            background: #fff;
+            color: #000;
+            padding: 15px;
+            border-radius: 5px;
+            min-width: 150px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #000;
+            font-size: 0.8em;
+        }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            nav a { display: block; padding: 5px; }
+            header { height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Dart Logo" class="banner-img">
+</header>
+
+<nav>
+    <a href="#ueber-uns">Über uns</a>
+    <a href="#spielstaette">Spielstätte</a>
+    <a href="#siegtaler">Siegtaler</a>
+    <a href="#dartageddon">DC Dartageddon</a>
+    <a href="#vorstand">Vorstand</a>
+    <a href="#sponsoren">Sponsoren</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<div class="container">
+
+    <section id="ueber-uns">
+        <h2>Aus Zufall wurden Freunde</h2>
+        <div class="grid">
+            <div>
+<p>Die Siegtaler Dart-Akrobaten die sich neu gegründet haben suchten ein Freundschaftsspiel, da hat sich Maxi gemeldet der Kapitän von DC Dartageddon (C-Liga). Tim der Kapitän von den Siegtaler Dart-Akrobaten stellte den Kontakt her.</p>
+                <p>Schnell merkten die beiden das eine gewisse Sympathie herrschte. Die Siegtaler Dart-Akrobaten standen plötzlich kurz vor Saison ohne Heimstätte da, nach intensiven Gesprächen der beiden TC‘s hat DC Dartageddon die Siegtaler Dart-Akrobaten herzlichst in Netphen aufgenommen.</p>
+                <p>Dadurch ist eine enge Freundschaft entstanden, Tim und Marcel der Siegtaler spielen bei DC Dartageddon in der A-Liga und privat macht man sehr viel, denn es passt!</p>
+                <p class="highlight">Gemeinsame Pläne werden auch geschmiedet! Zusammen ein eingetragener Verein werden steht an erster Stelle.</p>
+            </div>
+            <img src="team.jpg" alt="Team Foto" class="responsive">
+        </div>
+    </section>
+
+    <section id="spielstaette">
+        <h2>Spielstätte und Ligen</h2>
+        <div class="grid">
+            <img src="spielstaette.jpg" alt="Spielstätte" class="responsive">
+            <div>
+                <p>Zusammen spielen beide Teams im <strong>Sportheim des SV Netphen</strong>.</p>
+                
+                <h3>DC Dartageddon</h3>
+                <ul>
+                    <li><strong>DKS:</strong> A-Liga, C-Liga</li>
+                    <li><strong>DSAB:</strong> B-Liga</li>
+                </ul>
+
+                <h3>Siegtaler Dartakrobaten</h3>
+                <ul>
+                    <li><strong>DSAB:</strong> C-Liga</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="siegtaler">
+        <h2>Siegtaler Dart-Akrobaten</h2>
+        <h3>Unser Team</h3>
+        <div class="team-list">
+            <p><span class="highlight">TC 1:</span> Tim B.</p>
+            <p><span class="highlight">TC 2:</span> Marcel T.</p>
+            <p><span class="highlight">Schriftführer:</span> Pierre F.</p>
+            <hr>
+            <p>Pia B.</p>
+            <p>Nicole T.</p>
+            <p>Bodo H.</p>
+            <p>Katrin H.</p>
+            <p>Marc H.</p>
+            <p>Sascha T.</p>
+            <p>Michael E.</p>
+            <p>Hilmar S.</p>
+            <p>Kevin G.</p>
+            <p>Stephan Ü.</p>
+            <p>Sandra Ü.</p>
+            <p>Jürgen Ü.</p>
+            <p><strong>Ehrenmitglied:</strong> Horst Ü.</p>
+        </div>
+    </section>
+
+    <section id="dartageddon">
+        <h2>DC Dartageddon</h2>
+        <p>Timo Z.</p>
+    </section>
+
+    <section id="vorstand">
+        <h2>Der Vorstand</h2>
+        <p><em>Infos folgen</em></p>
+    </section>
+
+    <section id="sponsoren">
+        <h2>Sponsoren</h2>
+        <div class="sponsor-grid">
+            <div class="sponsor-card">SwissLife Select</div>
+            <div class="sponsor-card">Personal Union</div>
+            <div class="sponsor-card">Erzquell Brauerei</div>
+            <div class="sponsor-card">Hajde Automaten</div>
+            <div class="sponsor-card">Herr Biggie</div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="grid">
+            <div>
+                <h2>Kontakt</h2>
+                <p><strong>Siegtaler Dart-Akrobaten:</strong> Tim (Infos folgen)</p>
+                <p><strong>DC Dartageddon:</strong> Timo (Infos folgen)</p>
+            </div>
+            <div>
+                <h2>Impressum</h2>
+                <p><em>Infos folgen</em></p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Siegtaler Dart-Akrobaten & DC Dartageddon. Gut Dart!</p>
+</footer>
+
+</body>
+</html>
