@@ -130,6 +130,40 @@
             font-size: 0.8em;
         }
 
+       .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            background: #2d2d2d;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .player-row {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 12px;
+            border-radius: 40px 10px 10px 40px;
+            border: 1px solid #444;
+        }
+
+        .player-img {
+            width: 50px; 
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 12px;
+            border: 2px solid #e63946;
+            flex-shrink: 0;
+            background-color: #444;
+        }
+
+        .highlight {
+            color: #ffb703;
+            font-weight: bold;
+        }
         @media (max-width: 768px) {
             .grid { grid-template-columns: 1fr; }
             nav a { display: block; padding: 5px; }
