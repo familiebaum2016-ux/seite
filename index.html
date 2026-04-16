@@ -110,11 +110,20 @@ nav {
             font-weight: bold;
         }
 
-        .sponsor-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+       /* Styling für die freistehenden Logos */
+.sponsor-item img {
+    max-height: 80px;
+    width: auto;
+    transition: all 0.3s ease; /* Macht die Bewegung geschmeidig */
+    filter: grayscale(20%) brightness(0.9); /* Startzustand: leicht blasser */
+}
+
+/* Der Effekt beim Drüberfahren (Hover) */
+.sponsor-item:hover img {
+    transform: scale(1.1); /* Logo wird 10% größer */
+    filter: grayscale(0%) brightness(1.2) drop-shadow(0 0 10px rgba(230, 57, 70, 0.5)); 
+    /* Logo wird farbig, heller und bekommt einen roten Schatten passend zu deiner Vereinsfarbe */
+}
         }
 
         .sponsor-card {
