@@ -1167,6 +1167,111 @@
     </div>
 </section>
 
+<!-- NEUE MANNSCHAFTS-SEKTION FÜR BESSERE MOBIL-SICHTBARKEIT -->
+<section id="mannschaften-auswahl">
+    <div class="container">
+        <div class="section-header reveal">
+            <p class="section-label">Unsere Teams</p>
+            <h2 class="section-title">Wähle eine <span class="accent">Mannschaft</span></h2>
+            <p class="section-lead">Klicke auf ein Team, um die Spieler und Statistiken zu sehen.</p>
+        </div>
+        
+        <style>
+            .team-selection-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+                margin-top: 40px;
+            }
+            .team-select-card {
+                background: var(--bg-card);
+                border: 1px solid var(--border-subtle);
+                border-radius: var(--radius-lg);
+                padding: 40px 20px;
+                text-align: center;
+                cursor: pointer;
+                transition: var(--transition);
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 250px;
+            }
+            .team-select-card::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(135deg, var(--neon-red), transparent);
+                opacity: 0;
+                transition: var(--transition);
+                z-index: 0;
+            }
+            .team-select-card:hover {
+                transform: translateY(-10px);
+                border-color: var(--neon-red);
+                box-shadow: 0 20px 40px rgba(255,34,68,0.2);
+            }
+            .team-select-card:hover::before {
+                opacity: 0.1;
+            }
+            .team-select-icon {
+                font-size: 4rem;
+                margin-bottom: 20px;
+                position: relative;
+                z-index: 1;
+                filter: drop-shadow(0 0 15px var(--neon-red-glow));
+            }
+            .team-select-name {
+                font-family: var(--font-display);
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                position: relative;
+                z-index: 1;
+            }
+            .team-select-info {
+                font-family: var(--font-ui);
+                font-size: 0.9rem;
+                color: var(--neon-red);
+                margin-top: 10px;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                position: relative;
+                z-index: 1;
+            }
+            @media (max-width: 768px) {
+                .team-selection-grid {
+                    grid-template-columns: 1fr;
+                }
+                .team-select-card {
+                    min-height: 200px;
+                }
+            }
+        </style>
+
+        <div class="team-selection-grid">
+            <div class="team-select-card reveal" onclick="openTeam('siegtaler-overlay')">
+                <div class="team-select-icon">
+                    <img src="logo.png" alt="sdalogo.pgn" style="max-height: 120px; width: auto; filter: drop-shadow(0 0 15px var(--neon-red-glow));">
+                </div>
+                <div class="team-select-name">Siegtaler<br>Dart-Akrobaten</div>
+                <div class="team-select-info">Klicken zum Öffnen →</div>
+            </div>
+            <div class="team-select-card reveal" onclick="openTeam('dartageddon-overlay')">
+                <div class="team-select-icon">
+                    <img src="bilder/logodartageddon.png" alt="Dartageddon Logo" style="max-height: 120px; width: auto; filter: drop-shadow(0 0 15px var(--neon-red-glow));" onerror="this.src='logo.png'">
+                </div>
+                <div class="team-select-name">DC<br>Dartageddon</div>
+                <div class="team-select-info">Klicken zum Öffnen →</div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="spielstaette">
     <div class="container">
         <div class="section-header reveal">
