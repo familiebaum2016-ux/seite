@@ -812,12 +812,79 @@
         /* =============================================
            VORSTAND SECTION
         ============================================= */
-        .vorstand-placeholder {
+       .vorstand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 16px;
+        }
+
+        .vorstand-card {
             background: var(--bg-card);
-            border: 1px dashed var(--border-subtle);
+            border: 1px solid var(--border-subtle);
             border-radius: var(--radius-md);
-            padding: 60px;
-            text-align: center;
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: default;
+            position: relative;
+        }
+
+        .vorstand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255,34,68,0.15);
+            border-color: rgba(255,34,68,0.3);
+        }
+
+        .vorstand-img-wrap {
+            position: relative;
+            aspect-ratio: 1;
+            overflow: hidden;
+            background: var(--bg-dark);
+        }
+
+        .vorstand-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        .vorstand-card:hover .vorstand-img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .vorstand-img-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #1a1a2e, #0f0f1a);
+            color: var(--text-muted);
+            opacity: 0.5;
+        }
+
+        .vorstand-info {
+            padding: 14px;
+        }
+
+        .vorstand-name {
+            font-family: var(--font-ui);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+            letter-spacing: 0.02em;
+        }
+
+        .vorstand-role {
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--neon-red);
         }
 
         .vorstand-placeholder-icon {
